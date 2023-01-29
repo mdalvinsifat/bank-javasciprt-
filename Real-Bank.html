@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Booostrap Cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Custome Css  -->
+<link rel="stylesheet" href="/style.css">
+    <title>Bank</title>
+    
+</head>
+<body>
+    
+
+    <div class="login-area "  id="TotalBtn">
+       <div class="heading">
+        <h1 class="text-center">Well Come To My Bank</h1>
+       </div>
+       <div class="main">
+        <h3>Login</h3>
+       <input class="form-control" type="Email" placeholder="Email">
+       <br>
+       <input class="form-control" type="password" placeholder="password">
+       <br>
+       <div id ="EnterBtn"class="btn btn-primary">Enter</div>
+       </div>
+    </div>
+
+
+    <div id="parvin">
+        <h1 class="text-center">My Bank charge is some </h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                   <div class="Dipositib">
+                    <h4>Dipositib</h4>
+                    <h5 id="depositib">$<span id="mainnumber">00</span></h5>
+                   </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="Dipositib1">
+                        <h4>Withdrow</h4>
+                        <h5>$ <span id="wNumber">00</span></h5>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="Dipositib2">
+                        <h4>blance</h4>
+                        <h5>$<span id="number">1250</span></h5>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 sifat">
+            <h4 class="text-dark"> Depositib </h4>
+            <br>
+            <input class="form-control" id="depositAmount" type="text" placeholder="$Enter Your Amount">
+            <br>
+            <div class="btn btn-primary " id="depositbtn">Deposit</div>
+        </div>
+
+        <div class="col-md-6 sifat">
+            <h4 class="text-dark"> Withdrow
+                 </h4>
+            <br>
+            <input class="form-control" type="text" id="wAmount" placeholder="$Enter Your Amount">
+            <br>
+            <div class="btn btn-primary" id="wbtn">Withdrow</div>
+        </div>
+     </div>
+</div>
+<script>
+
+// Btn style 
+
+const FastPage = document.getElementById("EnterBtn")
+const senodPage = addEventListener("click",function(){
+const secondPage = document.getElementById("TotalBtn")
+secondPage.style.display="none"
+
+const thardPage =document.getElementById("parvin")
+thardPage.style.display="block"
+})
+
+
+
+// Deposit 
+
+const Amountnumber =document.getElementById("depositbtn")
+Amountnumber.addEventListener("click",function(){
+
+    const AmountNumber1 = document.getElementById("depositAmount").value
+    const Amount3 = parseFloat(AmountNumber1)
+
+
+    evento("number",Amount3)
+    evento("mainnumber",Amount3)
+})
+
+function evento(id,Amount3){
+    const bangladesh =document.getElementById(id).innerHTML
+    const bangladesh1 = parseFloat(bangladesh)
+    const total = Amount3+bangladesh1
+    document.getElementById(id).innerHTML=total
+}
+
+
+// widthdorw Deposit
+
+
+const Amountd = document.getElementById("wbtn")
+Amountd.addEventListener("click",function(){
+    const sifat = document.getElementById("wAmount")
+    const sah = parseFloat(sifat)
+
+})
+evenhello("wNumber",sah)
+evenhello("number" -1,sah)
+ 
+function evenhello(){
+    const maroNumber = document.getElementById(id).innerHTML
+    const maroNumber2= parseFloat(maroNumber)
+    return maroNumber2
+
+    document.getElementById(id).innerHTML
+}
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
